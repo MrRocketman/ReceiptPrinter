@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@class GCDAsyncSocket;
+
+@interface ViewController : UIViewController <UITextFieldDelegate, UITextViewDelegate>
+{
+    __weak IBOutlet UITextView *receivedDataTextView;
+    __weak IBOutlet UITextField *dataToSendTextField;
+    __weak IBOutlet UISegmentedControl *dataToSendEndOfLineCharacterSegmentedControl;
+    __weak IBOutlet UILabel *statusLabel;
+    
+    GCDAsyncSocket *socket;
+}
+
+- (IBAction)endOfLineSegmentChange:(id)sender;
+- (IBAction)sendToPrinter:(id)sender;
 
 @end
