@@ -16,6 +16,10 @@
 		1ABF881E154B907600F2BA63 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF881D154B907600F2BA63 /* ViewController.m */; };
 		1ABF8821154B907600F2BA63 /* ViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABF881F154B907600F2BA63 /* ViewController_iPhone.xib */; };
 		1ABF8824154B907600F2BA63 /* ViewController_iPad.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1ABF8822154B907600F2BA63 /* ViewController_iPad.xib */; };
+		1ABF8830154BA03900F2BA63 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABF882F154BA03900F2BA63 /* CFNetwork.framework */; };
+		1ABF8831154BA1D700F2BA63 /* GCDAsyncSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF882C154B90AA00F2BA63 /* GCDAsyncSocket.m */; };
+		1ABF8832154BA1DC00F2BA63 /* GCDAsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ABF882E154B90AA00F2BA63 /* GCDAsyncUdpSocket.m */; };
+		1ABF8834154BA25800F2BA63 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1ABF8833154BA25800F2BA63 /* Security.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,16 +27,23 @@
 		1ABF880A154B907600F2BA63 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1ABF880C154B907600F2BA63 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1ABF880E154B907600F2BA63 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		1ABF8812154B907600F2BA63 /* ReceiptPrinter-Info.plist */ = {isa = PBXFileReference; path = "ReceiptPrinter-Info.plist"; sourceTree = "<group>"; };
+		1ABF8812154B907600F2BA63 /* ReceiptPrinter-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ReceiptPrinter-Info.plist"; sourceTree = "<group>"; };
 		1ABF8814154B907600F2BA63 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1ABF8816154B907600F2BA63 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		1ABF8818154B907600F2BA63 /* ReceiptPrinter-Prefix.pch */ = {isa = PBXFileReference; path = "ReceiptPrinter-Prefix.pch"; sourceTree = "<group>"; };
-		1ABF8819154B907600F2BA63 /* AppDelegate.h */ = {isa = PBXFileReference; path = AppDelegate.h; sourceTree = "<group>"; };
+		1ABF8818154B907600F2BA63 /* ReceiptPrinter-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReceiptPrinter-Prefix.pch"; sourceTree = "<group>"; };
+		1ABF8819154B907600F2BA63 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1ABF881A154B907600F2BA63 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1ABF881C154B907600F2BA63 /* ViewController.h */ = {isa = PBXFileReference; path = ViewController.h; sourceTree = "<group>"; };
+		1ABF881C154B907600F2BA63 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		1ABF881D154B907600F2BA63 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		1ABF8820154B907600F2BA63 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPhone.xib; sourceTree = "<group>"; };
 		1ABF8823154B907600F2BA63 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController_iPad.xib; sourceTree = "<group>"; };
+		1ABF882B154B90AA00F2BA63 /* GCDAsyncSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncSocket.h; sourceTree = "<group>"; };
+		1ABF882C154B90AA00F2BA63 /* GCDAsyncSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncSocket.m; sourceTree = "<group>"; };
+		1ABF882D154B90AA00F2BA63 /* GCDAsyncUdpSocket.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GCDAsyncUdpSocket.h; sourceTree = "<group>"; };
+		1ABF882E154B90AA00F2BA63 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
+		1ABF882F154BA03900F2BA63 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		1ABF8833154BA25800F2BA63 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		1ABF883C1553613000F2BA63 /* Qr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Qr.h; path = "../../../../../../Electronics/Arduino/My Code/WiFly_Test/Qr.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABF8834154BA25800F2BA63 /* Security.framework in Frameworks */,
+				1ABF8830154BA03900F2BA63 /* CFNetwork.framework in Frameworks */,
 				1ABF880B154B907600F2BA63 /* UIKit.framework in Frameworks */,
 				1ABF880D154B907600F2BA63 /* Foundation.framework in Frameworks */,
 				1ABF880F154B907600F2BA63 /* CoreGraphics.framework in Frameworks */,
@@ -52,6 +65,8 @@
 		1ABF87FB154B907600F2BA63 = {
 			isa = PBXGroup;
 			children = (
+				1ABF8833154BA25800F2BA63 /* Security.framework */,
+				1ABF882F154BA03900F2BA63 /* CFNetwork.framework */,
 				1ABF8810154B907600F2BA63 /* ReceiptPrinter */,
 				1ABF8809154B907600F2BA63 /* Frameworks */,
 				1ABF8807154B907600F2BA63 /* Products */,
@@ -79,12 +94,14 @@
 		1ABF8810154B907600F2BA63 /* ReceiptPrinter */ = {
 			isa = PBXGroup;
 			children = (
+				1ABF883C1553613000F2BA63 /* Qr.h */,
 				1ABF8819154B907600F2BA63 /* AppDelegate.h */,
 				1ABF881A154B907600F2BA63 /* AppDelegate.m */,
 				1ABF881C154B907600F2BA63 /* ViewController.h */,
 				1ABF881D154B907600F2BA63 /* ViewController.m */,
 				1ABF881F154B907600F2BA63 /* ViewController_iPhone.xib */,
 				1ABF8822154B907600F2BA63 /* ViewController_iPad.xib */,
+				1ABF882A154B909A00F2BA63 /* Socket */,
 				1ABF8811154B907600F2BA63 /* Supporting Files */,
 			);
 			path = ReceiptPrinter;
@@ -99,6 +116,17 @@
 				1ABF8818154B907600F2BA63 /* ReceiptPrinter-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		1ABF882A154B909A00F2BA63 /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				1ABF882B154B90AA00F2BA63 /* GCDAsyncSocket.h */,
+				1ABF882C154B90AA00F2BA63 /* GCDAsyncSocket.m */,
+				1ABF882D154B90AA00F2BA63 /* GCDAsyncUdpSocket.h */,
+				1ABF882E154B90AA00F2BA63 /* GCDAsyncUdpSocket.m */,
+			);
+			name = Socket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -165,6 +193,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ABF8832154BA1DC00F2BA63 /* GCDAsyncUdpSocket.m in Sources */,
+				1ABF8831154BA1D700F2BA63 /* GCDAsyncSocket.m in Sources */,
 				1ABF8817154B907600F2BA63 /* main.m in Sources */,
 				1ABF881B154B907600F2BA63 /* AppDelegate.m in Sources */,
 				1ABF881E154B907600F2BA63 /* ViewController.m in Sources */,
@@ -289,6 +319,7 @@
 				1ABF8829154B907600F2BA63 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -16,11 +16,19 @@
     __weak IBOutlet UITextField *dataToSendTextField;
     __weak IBOutlet UISegmentedControl *dataToSendEndOfLineCharacterSegmentedControl;
     __weak IBOutlet UILabel *statusLabel;
+    __weak IBOutlet UIButton *connectDisconnectButton;
+    __weak IBOutlet UIButton *printBitmapButton;
+    BOOL connected;
+    
+    BOOL commandFinished;
+    BOOL printingBitmap;
     
     GCDAsyncSocket *socket;
 }
 
 - (IBAction)endOfLineSegmentChange:(id)sender;
 - (IBAction)sendToPrinter:(id)sender;
+- (IBAction)connectDisconnectButtonPress:(id)sender;
+- (IBAction)printBitmapButtonPress:(id)sender;
 
 @end
