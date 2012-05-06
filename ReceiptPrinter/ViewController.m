@@ -8,7 +8,7 @@
 
 #import "ViewController.h"
 #import "GCDAsyncSocket.h"
-#import "Qr.h"
+#import "TheBitmap.h"
 
 #define HOST @"169.254.1.1"
 #define HOST_PORT 2000
@@ -178,23 +178,25 @@
 {
     printingBitmap = YES;
     
-    NSString *command = [NSString stringWithFormat:@"P08 V%d S%d\n", QrHeight, QrWidth];
+    NSString *command = [NSString stringWithFormat:@"P08 V%d S%d\n", TheBitmapHeight, TheBitmapWidth];
     NSLog(@"Sending: %@", command);
     NSData *requestData = [command dataUsingEncoding:NSUTF8StringEncoding];
     [self performSelectorOnMainThread:@selector(writeDataToSocket:) withObject:requestData waitUntilDone:NO];
     
-    for(int i = 0; i < (int)(QrWidth / 8.0 * QrHeight); i ++)
+    // Send the whole image in one command
+    /*for(int i = 0; i < (int)(TheBitmapWidth / 8.0 * TheBitmapHeight); i ++)
     {
-        command = [NSString stringWithFormat:@"%02X", Qr[i]];
+        command = [NSString stringWithFormat:@"%02X", TheBitmap[i]];
         NSLog(@"Sending: %@", command);
         requestData = [command dataUsingEncoding:NSUTF8StringEncoding];
         commandFinished = NO;
         [self performSelectorOnMainThread:@selector(writeDataToSocket:) withObject:requestData waitUntilDone:NO];
         [NSThread sleepForTimeInterval:0.005];
-    }
+    }*/
     
-    /*int i3 = 0;
-    for(int i = 0; i < (int)(QrWidth / 8.0 * QrHeight / 16.0); i ++)
+    // Send the image one line at a time
+    int i3 = 0;
+    for(int i = 0; i < (int)(TheBitmapWidth / 8.0 * TheBitmapHeight / 16.0); i ++)
     {
         while(!commandFinished)
         {
@@ -202,12 +204,12 @@
         }
         
         command = [NSString stringWithFormat:@"P09"];
-        for(int i2 = 0; i2 < QrWidth / 8; i2 ++)
+        for(int i2 = 0; i2 < TheBitmapWidth / 8; i2 ++)
         {
-            i3 = i * (int)(QrWidth / 8) + i2;
-            if(i3 > (int)(QrWidth / 8.0 * QrHeight) - 1)
+            i3 = i * (int)(TheBitmapWidth / 8) + i2;
+            if(i3 > (int)(TheBitmapWidth / 8.0 * TheBitmapHeight) - 1)
                 break;
-            command = [NSString stringWithFormat:@"%@ V%02X", command, Qr[i3]];
+            command = [NSString stringWithFormat:@"%@ V%02X", command, TheBitmap[i3]];
         }
         command = [NSString stringWithFormat:@"%@\n", command];
         NSLog(@"Sending: %@", command);
@@ -222,7 +224,7 @@
         NSLog(@"Sending: %@", command);
         requestData = [command dataUsingEncoding:NSUTF8StringEncoding];
         [self performSelectorOnMainThread:@selector(writeDataToSocket:) withObject:requestData waitUntilDone:NO];
-    }*/
+    }
 }
 
 - (void)writeDataToSocket:(NSData *)data
