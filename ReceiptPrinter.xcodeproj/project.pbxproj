@@ -43,7 +43,7 @@
 		1ABF882E154B90AA00F2BA63 /* GCDAsyncUdpSocket.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GCDAsyncUdpSocket.m; sourceTree = "<group>"; };
 		1ABF882F154BA03900F2BA63 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		1ABF8833154BA25800F2BA63 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		1ABF883C1553613000F2BA63 /* Qr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Qr.h; path = "../../../../../../Electronics/Arduino/My Code/WiFly_Test/Qr.h"; sourceTree = "<group>"; };
+		1ABF88481557333A00F2BA63 /* TheBitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TheBitmap.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +94,7 @@
 		1ABF8810154B907600F2BA63 /* ReceiptPrinter */ = {
 			isa = PBXGroup;
 			children = (
-				1ABF883C1553613000F2BA63 /* Qr.h */,
+				1ABF88481557333A00F2BA63 /* TheBitmap.h */,
 				1ABF8819154B907600F2BA63 /* AppDelegate.h */,
 				1ABF881A154B907600F2BA63 /* AppDelegate.m */,
 				1ABF881C154B907600F2BA63 /* ViewController.h */,
